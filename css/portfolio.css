@@ -1,5 +1,10 @@
 :root {
     /* Put variables here */
+    --main-color: #1d3557;
+    --accent-1: #457b9d;
+    --accent-2: #a8dadc;
+    --accent-3: #f1faee;
+    --accent-4: #e63946;
 }
 * {
     margin: 0;
@@ -8,14 +13,14 @@
     font-family: 'Montserrat', sans-serif;
 }
 body {
-    background: lightgray;
+    background: var(--main-color);
 }
 header {
     padding: 2rem;
     text-align: center;
 }
 nav {
-    background: black;
+    background: var(--accent-1);
     color: white;
 }
 nav ul {
@@ -38,13 +43,13 @@ nav li a:hover {
 }
 
 footer {
-    background: black;
+    background: var(--accent-1);
     color: white;
     padding: 3rem;
     min-height: 10vh;
 }
 .container {
-    background: lightblue;
+    background: var(--accent-2);
     padding: 1rem;
     min-height: 60vh;
     width: 80%;
@@ -155,6 +160,7 @@ footer {
 } 
 .contact-item {
     padding: 1.15rem;
+    color: black;
     font-size: 1.75rem;
     display: flex;
     flex-direction: row;
@@ -184,5 +190,17 @@ footer {
     }
     .section-item {
         flex-basis: 92%;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .section-header {
+        text-align: center;
+    }
+    .row-button {
+        max-width: 60vw;
+    }
+    .contact {
+        align-items: center;
     }
 }
