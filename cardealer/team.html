@@ -34,7 +34,7 @@
         <div class="grid-item"><!--Start of grid item-->
 
             <div class="grid-image"><!--Start of grid image-->
-                <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" alt="#">
+                <img onmouseover="replaceImage(0)" onmouseout="replaceImage(0)" src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" data-image2="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg" alt="#">
             </div><!--Close of grid image-->
             <h3>Name of Person</h3>
             <h4>Person's Title</h4>
@@ -47,7 +47,7 @@
         <div class="grid-item"><!--Start of grid item-->
 
             <div class="grid-image"><!--Start of grid image-->
-                <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" alt="#">
+                <img onmouseover="replaceImage(1)" onmouseout="replaceImage(1)" src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" data-image2="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg" alt="#">
             </div><!--Close of grid image-->
             <h3>Name of Person</h3>
             <h4>Person's Title</h4>
@@ -60,7 +60,7 @@
         <div class="grid-item"><!--Start of grid item-->
 
             <div class="grid-image"><!--Start of grid image-->
-                <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" alt="#">
+                <img onmouseover="replaceImage(2)" onmouseout="replaceImage(2)" src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png"  data-image2="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg"alt="#">
             </div><!--Close of grid image-->
             <h3>Name of Person</h3>
             <h4>Person's Title</h4>
@@ -73,7 +73,7 @@
         <div class="grid-item"><!--Start of grid item-->
 
             <div class="grid-image"><!--Start of grid image-->
-                <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" alt="#">
+                <img onmouseover="replaceImage(3)" onmouseout="replaceImage(3)" src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" data-image2="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg" alt="#">
             </div><!--Close of grid image-->
             <h3>Name of Person</h3>
             <h4>Person's Title</h4>
@@ -150,6 +150,18 @@
     <footer><!--Start of Footer-->
         Made in FHS Web Design 
     </footer><!--End of Footer-->
+
+    <script>
+        function replaceImage(num) {
+            var element = document.getElementsByTagName('img')[num];
+            var originalimage = element.getAttribute('src');
+            var newImage = element.getAttribute('data-image2');
+
+            element.setAttribute('src', newImage);
+            element.setAttribute('data-image2', originalimage);
+            //alert(newImage);
+        }
+    </script>
 
 
 
